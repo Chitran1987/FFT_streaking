@@ -16,6 +16,8 @@ tab.func <- data.frame(X=X, Y=Y)
 tab.func$Y[tab.func$X <lims[1]] <- 0
 tab.func$Y[tab.func$X >lims[2]] <- 0
 plot(tab.func$X, tab.func$Y)
+#increase resolution by padding
+tab.func <- padding(X=tab.func$X, Y=tab.func$Y, fwd = 2, bwd = 2, pad.type = 'zero')
 
 #derive the fft for the table function
 fy.tab <- fft_1D(X=tab.func$X, Y=tab.func$Y)
