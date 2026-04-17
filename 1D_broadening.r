@@ -19,4 +19,4 @@ plot(tab.func$X, tab.func$Y)
 
 #derive the fft for the table function
 fy.tab <- fft_1D(X=tab.func$X, Y=tab.func$Y)
-plot(fy.tab$freq, fy.tab$Ampl, type = 'b', col='red', xlim = c(-5, 5))
+plot(fy.tab$freq, fy.tab$Ampl, type = 'l', col='red', xlim = c(-5, 5))
